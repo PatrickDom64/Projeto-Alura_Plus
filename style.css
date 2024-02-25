@@ -2,6 +2,7 @@
     --branco-principal: #ffffff;
     --cinza-secundario: #c0c0c0;
     --botao-azul:       #167bf7;
+    --botao-azul-efeito:#3c92fa;
     --cor-de-fundo:     #00030c;
     --fonte-principal: 'inter';
 }
@@ -110,25 +111,34 @@ body{
 .rodape{
     text-align: center;
     color: var(--cinza-secundario);
+    text-decoration: none;
 }
 .rodape__logo{
     margin: 2em;
 }
-
 .lista__link{
     display: inline-block;
     margin-right: 10px;
-    text-decoration: none;
-    color: var(--botao-azul);
-}
-.lista__link a:hover {
     color: var(--branco-principal);
-    text-decoration: none;
+    list-style-type: none;
 }
-.lista__link a:active {
-    color: purple;
+.lista__link a {
+    text-decoration: none;
+    color: var(--branco-principal);
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul-efeito);
+    text-decoration: none;
+    transition: 0.8s;
 }
 .rodape__texto{
     padding: 1em;
-    
+    font-size: small;
+}
+
+.conteiner__botao:hover{
+    background-color: var(--botao-azul-efeito);
+    color: black;
+    transition: 0.8s;
 }
